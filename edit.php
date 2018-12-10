@@ -2,22 +2,11 @@
     
     session_start();
     include 'medium.php';
+    include 'connection.php';
 ?>
 
 <?php
-    $serverName = "localhost";   
-    $database = "scrapbook";   
-    $dbusername = "root";   
-    $dbpassword = "mysql";
-
-    // Create connection
-    $conn = mysqli_connect($serverName, $dbusername, $dbpassword, $database);
-
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
-
+    
     $net= $_GET['id'];
 
     $sql = "SELECT title, note FROM notes WHERE id=".$net;

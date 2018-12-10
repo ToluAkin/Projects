@@ -1,11 +1,13 @@
 <?php 
+    include 'connection.php';
+
     $username = $_POST['username'];
     $firstname = $_POST['firstname']; 
     $lastname = $_POST['lastname'];
     $email = $_POST['email']; 
     $pswd = $_POST['pswd'];
     $cpswd = $_POST['cpswd']; 
-    saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd);
+    saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd, $conn);
     saveToFile($username, $firstname, $lastname, $email, $pswd, $cpswd);
     header('Location:signin.php');
 
@@ -16,22 +18,10 @@
         fclose($fileHandler); 
     }
 
-    function saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd) {   
-        $serverName = "localhost";   
-        $database = "scrapbook";   
-        $dbusername = "root";   
-        $dbpassword = "mysql";
-
-        //Open database connection   
-        $conn = mysqli_connect($serverName, $dbusername, $dbpassword, $database);
-
-        // Check that connection exists   
-        if (!$conn) {       
-            die("Connection failed: " . mysqli_connect_error());  
-        }   
-
+    function saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd, $conn) { 
         $sql = "INSERT INTO users (username, firstname, lastname, email, pswd, cpswd, created_at)  
-        VALUES ('$username','$firstname', '$lastname', '$email', '$pswd', '$cpswd', NOW())";  
+        VALUES ('$username','$firstname', '$lastname', '$email', '$pswd', '$cpswd', NOW())";
+
         $result = mysqli_query($conn, $sql);
 
         //Check for errors   

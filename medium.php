@@ -1,18 +1,7 @@
-<?php  
+<?php
+    include 'connection.php';
     session_start();
-    $serverName = "localhost";   
-    $database = "scrapbook";   
-    $username = "root";   
-    $dbpassword = "mysql";
-
-    //Open database connection   
-    $conn = mysqli_connect($serverName, $username, $dbpassword, $database);
-
-    // Check that connection exists   
-    if (!$conn) {       
-        die("Connection failed: " . mysqli_connect_error());  
-    }
-
+    
     if (isset($_POST['submit'])){
         $username = mysqli_escape_string($conn,$_POST['username']);
         $pswd = mysqli_escape_string($conn,$_POST['pswd']);

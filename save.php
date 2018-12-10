@@ -59,24 +59,12 @@
             
         <?php
             include 'medium.php';
-            $serverName = "localhost";   
-            $database = "scrapbook";   
-            $dbusername = "root";   
-            $dbpassword = "mysql";
+            include 'connection.php';
 
-            // Create connection
-            $conn = mysqli_connect($serverName, $dbusername, $dbpassword, $database);
-
-            // Check connection
-            if (!$conn) {
-                die("Connection failed: " . mysqli_connect_error());
-            }
-
-            else{
-                $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
-                $result = mysqli_query($conn, $sql);
-                $resultCheck = mysqli_num_rows($result);
-            }
+            $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
+            $result = mysqli_query($conn, $sql);
+            $resultCheck = mysqli_num_rows($result);
+            
             
             $i=1;
 
