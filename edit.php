@@ -1,6 +1,4 @@
-<?php
-    
-    session_start();
+<?php   
     include 'medium.php';
     include 'connection.php';
 ?>

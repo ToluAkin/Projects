@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include 'medium.php';
 
 ?>
@@ -64,19 +63,18 @@
             $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
-            
-            
+                        
             $i=1;
 
             if ($resultCheck > 0) {
                 // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
-                    // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
-                echo "<tr><td>".$i."</td><td>".$row['title']."</td><td>".$row['created_at']."</td>
-                    <td>"."<a class='btn btn-light' href='edit.php?id=".$row['id']."' role='button'>Edit</a>"."</td>
-                    <td>"."<a class='btn btn-secondary' href='delete.php?id=".$row['id']."' role='button'>Delete</a>"."</td></tr>";
-                $i++;
-                }
+            while ($row = mysqli_fetch_assoc($result)) {
+                // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
+            echo "<tr><td>".$i."</td><td>".$row['title']."</td><td>".$row['created_at']."</td>
+                <td>"."<a class='btn btn-light' href='edit.php?id=".$row['id']."' role='button'>Edit</a>"."</td>
+                <td>"."<a class='btn btn-secondary' href='delete.php?id=".$row['id']."' role='button'>Delete</a>"."</td></tr>";
+            $i++;
+            }
             } else {
                 echo "0 results";
             }
