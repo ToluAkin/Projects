@@ -11,7 +11,7 @@
     $result = mysqli_query($conn, $sql);
 
     if ($row = mysqli_fetch_assoc($result)) {
-        echo $row['id'];
+        // echo $row['id'];
     } else {
         echo "Error:" . mysqli_error($conn);
     }
