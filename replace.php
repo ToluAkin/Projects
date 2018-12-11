@@ -1,4 +1,5 @@
 <?php
+    include 'connection.php';
     
     $title = $_POST['title'];
     $note = $_POST['note'];  
