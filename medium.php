@@ -4,7 +4,7 @@
     
     if (isset($_POST['submit'])){
         $username = mysqli_escape_string($conn,$_POST['username']);
-        $pswd = mysqli_escape_string($conn,$_POST['pswd']);
+        $pswd = mysqli_escape_string($conn,sha1($_POST['pswd']));
                     
        if(empty($username) || empty($pswd)){
             echo "All fields are required";

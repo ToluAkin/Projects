@@ -5,9 +5,8 @@
     $firstname = $_POST['firstname']; 
     $lastname = $_POST['lastname'];
     $email = $_POST['email']; 
-    $pswd = $_POST['pswd'];
-    $cpswd = $_POST['cpswd']; 
-    saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd, $conn);
+    $pswd = sha1($_POST['pswd']);
+    saveToDatabase($username, $firstname, $lastname, $email, $pswd, $conn);
     header('Location:signin.php');
     
     function saveToDatabase($username, $firstname, $lastname, $email, $pswd, $conn) { 
