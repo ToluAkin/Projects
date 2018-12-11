@@ -8,19 +8,11 @@
     $pswd = $_POST['pswd'];
     $cpswd = $_POST['cpswd']; 
     saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd, $conn);
-    saveToFile($username, $firstname, $lastname, $email, $pswd, $cpswd);
     header('Location:signin.php');
-
-    function saveToFile($username, $firstname, $lastname, $email, $pswd, $cpswd) {   
-        $fileHandler = fopen('record.txt', 'a');   
-        $string = $username . ',' . $firstname . ',' . $lastname . ',' . $email . ',' . $pswd . ',' . $cpswd . "\n";   
-        fwrite($fileHandler, $string);   
-        fclose($fileHandler); 
-    }
-
-    function saveToDatabase($username, $firstname, $lastname, $email, $pswd, $cpswd, $conn) { 
-        $sql = "INSERT INTO users (username, firstname, lastname, email, pswd, cpswd, created_at)  
-        VALUES ('$username','$firstname', '$lastname', '$email', '$pswd', '$cpswd', NOW())";
+    
+    function saveToDatabase($username, $firstname, $lastname, $email, $pswd, $conn) { 
+        $sql = "INSERT INTO users (username, firstname, lastname, email, pswd, created_at)  
+        VALUES ('$username','$firstname', '$lastname', '$email', '$pswd', NOW())";
 
         $result = mysqli_query($conn, $sql);
 
