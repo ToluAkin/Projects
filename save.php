@@ -57,7 +57,6 @@
             <tbody>
             
         <?php
-            include 'medium.php';
             include 'connection.php';
 
             $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
