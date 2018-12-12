@@ -36,7 +36,7 @@
             $sql = "DELETE FROM notes WHERE id=".$net;
 
             if (mysqli_query($conn, $sql)) {
-                echo "<p>Entry saved sucessfully.<a href='saved.php'> Back to notes.</a></p>";
+                echo "<p>Note has been deleted.<a href='saved.php'> Back to notes.</a></p>";
             } else {
                 echo "Error deleting entry: " . mysqli_error($conn);
             }
