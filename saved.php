@@ -20,7 +20,6 @@
         td, th {
         text-align: left;
         padding: 10px;
-        width:10%;
     }
     </style>
 </head>
