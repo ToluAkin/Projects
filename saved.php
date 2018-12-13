@@ -44,39 +44,36 @@
     </nav>
     <br><br><br><br>
     <div class="container">
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Title</th>
-                    <th>Date</th>
-                </tr>
-            </thead>
-            <tbody>
-            
-        <?php
-            $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
-            $result = mysqli_query($conn, $sql);
-            $resultCheck = mysqli_num_rows($result);
-            
-            $i = 1;
-            if ($resultCheck > 0) {
-                // output data of each row
-                while ($row = mysqli_fetch_assoc($result)) {
-                // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
-                echo "<tr><td>".$i."</td><td>".$row['title']."</td><td>".$row['created_at']."</td>
-                    <td>"."<a class='btn btn-light' href='edit.php?id=".$row['id']."' role='button'>Edit</a>"."</td>
-                    <td>"."<a class='btn btn-secondary' href='delete.php?id=".$row['id']."' role='button'>Delete</a>"."</td></tr>";
-                $i++;
+        <div class="row">
+            <?php
+                $sql = "SELECT id, title, note, created_at FROM notes WHERE userid = ".$_SESSION['userid'];
+                $result = mysqli_query($conn, $sql);
+                $resultCheck = mysqli_num_rows($result);
+                
+                if ($resultCheck > 0) {
+                    // output data of each row
+                    while ($row = mysqli_fetch_assoc($result)) {
+                    // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
+                    echo "<div class='col-md-3'><div class='card w-30'><div class='card-body'><h5 class = 'card-title'> 
+                        ".$row['title']."</h5><hr><p class = 'card-text'>";
+                    // echo $row['note'];
+                    $text = $row['note'];
+                    if (strlen($text) > 80){
+                        echo substr($text, 0, 80)."...";
+                    }
+                    else {
+                        echo $text;
+                    }
+                    echo "</p><hr>"."<a href='edit.php?id=".$row['id']."' class='card-link'><i class='fas fa-pen-nib'></i></a>"."
+                        "."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'></i></a>"."</div></div></div>";
+                    }
+                } else {
+                    echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
                 }
-            } else {
-                echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
-            }
 
-            mysqli_close($conn);
-        ?>
-        </tbody>
-    </table>    
+                mysqli_close($conn);
+            ?>
+        </div>  
     </div>
     <br><br><br><br><br><br>
     <footer>
