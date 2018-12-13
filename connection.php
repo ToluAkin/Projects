@@ -1,11 +1,11 @@
 <?php
     $serverName = "localhost";   
     $database = "scrapbook";   
-    $username = "root";   
+    $dbusername = "root";   
     $dbpassword = "mysql";
 
     //Open database connection   
-    $conn = mysqli_connect($serverName, $username, $dbpassword, $database);
+    $conn = mysqli_connect($serverName, $dbusername, $dbpassword, $database);
 
     // Check that connection exists   
     if (!$conn) {       
