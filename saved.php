@@ -54,7 +54,7 @@
                     // output data of each row
                     while ($row = mysqli_fetch_assoc($result)) {
                     // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
-                    echo "<div class='col-md-3'><div class='card w-30'><div class='card-body'><h5 class = 'card-title'> 
+                    echo "<div class='col-md-3'><div class='card w-30'><div class='card-body text-success'><h5 class = 'card-title'> 
                         ".$row['title']."</h5><hr><p class = 'card-text'>";
                     // echo $row['note'];
                     $text = $row['note'];
