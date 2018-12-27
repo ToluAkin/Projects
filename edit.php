@@ -37,7 +37,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="nav-link" data-value="save" href="saved.php">Saved notes</a>  
-        <a class="nav-link" data-value="add" href="add.html">Add note</a>        
+        <a class="nav-link" data-value="add" href="add.php">Add note</a>        
         <div class="collapse navbar-collapse " id="navbarSupportedContent">     
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <li class="nav-item">
