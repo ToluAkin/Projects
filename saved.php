@@ -64,9 +64,10 @@
                     else {
                         echo $text;
                     }
-                    echo "</p><hr>"."<a href='edit.php?id=".$row['id']."' class='card-link'><i class='fas fa-pen-nib'></i></a>"."
-                        "."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'></i></a>"."</div></div></div>
-                        ";
+                    echo "</p><hr>"."<a href='edit.php?id=".$row['id']."' class='card-link'><i class='fas fa-pen-nib'></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".""."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'>
+                        </i></a>"."</div></div></div>";
                     }
                 } else {
                     echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
