@@ -25,6 +25,15 @@ a:hover {
 	font-size:15px;
 }
 
+/* Header */
+
+.header {
+    padding: 280px;
+    background-image: url('../images/pencil.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* <!--Body--> */
 
 body { 
