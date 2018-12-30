@@ -5,7 +5,7 @@
 /* <!--Navigation--> */
 
 a {
-    color:purple;
+    color:whitesmoke;
 }
 
 a:hover {
@@ -25,8 +25,9 @@ a:hover {
 
 body { 
     align-content: center;
-    background-color: greenyellow;
-}
+    text-align: center;
+    background-color: rgb(21, 192, 98);
+    color: whitesmoke;
 
 /* <!--Form Area--> */
 
@@ -54,6 +55,7 @@ footer {
     padding-top: 5%;
     text-align: center;
     line-height: 1%;
+    
 }
 .fa-facebook-f, .fa-twitter, .fa-linkedin-in {
     color:rgb(21, 192, 98);
