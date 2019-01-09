@@ -28,6 +28,7 @@ body {
     text-align: center;
     background-color: rgb(21, 192, 98);
     color: whitesmoke;
+}
 
 /* <!--Form Area--> */
 
@@ -58,7 +59,7 @@ footer {
     
 }
 .fa-facebook-f, .fa-twitter, .fa-linkedin-in {
-    color:rgb(21, 192, 98);
+    color:blueviolet;
     display: inline-block;
     border-radius: 60px;
     box-shadow: 0px 0px 2px #888;

@@ -31,11 +31,14 @@
             $_SESSION['username'] = $username;
             $_SESSION['email'] = $email;
             $_SESSION['pswd'] = $pswd;
+            // send them back
+            $_SESSION['frommedium'] = "true";
             header("Location:saved.php");
         } else{
             die("Error: User does not exist " . $sql . "<br>" . mysqli_error($conn));   
-            header("Location:signin.html");
-        }
+            header("Location:signin.php");
+        } 
+        
         //Close the connection   
         mysqli_close($conn); 
     
