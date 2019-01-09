@@ -11,17 +11,6 @@
     <link href="bootstrap-4.1.3-dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/style.css">
-    <style>
-        table {
-        border-collapse: collapse;
-        width: 100%;
-    } 
-
-        td, th {
-        text-align: left;
-        padding: 10px;
-    }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top ">  
@@ -54,9 +43,9 @@
                     // output data of each row
                     while ($row = mysqli_fetch_assoc($result)) {
                     // echo  $row["id"]. ".". " " . $row["title"]. " " . $row["note"]." " . $row["created_at"]. "<br>";
-                    echo "<div class='col-md-3'><div class='card w-30'><div class='card-body text-success'><h5 class = 'card-title'> 
-                        ".$row['title']."</h5><hr><p class = 'card-text'>";
-                    // echo $row['note'];
+                    echo "<div class='col-md-3'><div class='card w-30'><div class='card-body text-success'><h5 class = 
+                    'card-title'>".$row['title']."</h5><hr><p class = 'card-text'>";
+                    // echo $row['note']; 
                     $text = $row['note'];
                     if (strlen($text) > 80){
                         echo substr($text, 0, 80)."...";
@@ -64,10 +53,11 @@
                     else {
                         echo $text;
                     }
-                    echo "</p><hr>"."<a href='edit.php?id=".$row['id']."' class='card-link'><i class='fas fa-pen-nib'></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;".""."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'>
-                        </i></a>"."</div></div></div>";
+                    echo "</p><hr>"."<a href='edit.php?id=".$row['id']."' class='card-link'><i class='fas fa-pen-nib'></i></a> 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ".""."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'></i></a>"."
+                    </div></div></div>";
                     }
                 } else {
                     echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
