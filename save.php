@@ -1,6 +1,8 @@
 <?php
     include 'medium.php';
-
+    if (!isset($_SESSION['username'])){
+        header("Location: signin.php");
+    }
 ?>
 <!DOCTYPE html>
 <html>

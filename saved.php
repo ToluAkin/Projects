@@ -1,11 +1,8 @@
-<?php 
+<?php
     include 'medium.php';
     //send them back
-    if ($_SESSION['frommedium'] == "false"){
-    header("Location: signin.php");
-    }else {
-        //reset variable
-        $_SESSION['frommedium'] = "false";
+    if (!isset($_SESSION['username'])){
+        header("Location: signin.php");
     }
 ?>
 <!DOCTYPE html>
