@@ -18,10 +18,10 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">     
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
             <li class="nav-item">
-                    <a class="nav-link" data-value="signup" href="signup.html"><i class="fas fa-user-plus"></i></a>        
+                    <a class="nav-link" data-value="signup" href="signup.html">Sign Up <i class="fas fa-user-plus"></i></a>        
                 </li>  
                 <li class="nav-item">
-                    <a class="nav-link" data-value="login" href="signin.php"><i class="fas fa-user-circle"></i></a>    
+                    <a class="nav-link" data-value="login" href="signin.php">Sigin In <i class="fas fa-user-circle"></i></a>    
                 </li>
             </ul>
         </div>

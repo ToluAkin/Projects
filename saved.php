@@ -22,8 +22,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="nav-link" data-value="save" href="saved.php">Saved notes</a>  
-        <a class="nav-link" data-value="add" href="add.php">Add note</a>     
+        <a class="nav-link" data-value="save" href="saved.php">Saved notes <i class="fas fa-save"></i></a>  
+        <a class="nav-link" data-value="add" href="add.php">Add Note <i class="fas fa-plus"></i></a>     
         <div class="collapse navbar-collapse " id="navbarSupportedContent">     
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <li class="nav-item">
