@@ -61,7 +61,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     ".""."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'></i></a>"."
-                    </div></div></div>"."<i class='fas fa-plus'>";
+                    </div></div></div>";
                     }
                 } else {
                     echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
