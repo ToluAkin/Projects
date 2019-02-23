@@ -22,8 +22,8 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">  
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="nav-link" data-value="save" href="saved.php">Saved notes <i class="fas fa-save"></i></a>  
-        <a class="nav-link" data-value="add" href="add.php">Add Note <i class="fas fa-plus"></i></a>     
+        <a class="nav-link" data-value="save" href="saved.php">Notes <i class="fas fa-save"></i></a>  
+        <a class="nav-link" data-value="add" href="add.php">Add <i class="fas fa-plus"></i></a>     
         <div class="collapse navbar-collapse " id="navbarSupportedContent">     
             <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
                 <li class="nav-item">
@@ -61,7 +61,7 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     ".""."<a href='delete.php?id=".$row['id']."' class='card-link'><i class='far fa-trash-alt'></i></a>"."
-                    </div></div></div>";
+                    </div></div></div>"."<i class='fas fa-plus'>";
                     }
                 } else {
                     echo "<p>Start using Green Scrapbook by <b>adding a note</b>.</p>";
