@@ -58,7 +58,7 @@ footer {
     line-height: 1%;
     
 }
-.fa-facebook-f, .fa-twitter, .fa-linkedin-in {
+.fa-facebook-f, .fa-twitter, .fa-linkedin-in, .fa-trash-alt, .fa-pen-nib {
     color:rgb(94, 187, 94);
     display: inline-block;
     border-radius: 60px;
