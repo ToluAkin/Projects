@@ -17,12 +17,12 @@
         if ($resultCheck > 0)  { 
             echo $resultCheck;
             $row = mysqli_fetch_assoc($result);
-            echo $row['id'];
+            echo $row['userid'];
             echo $row['username'];
             echo $row['email'];
             echo $row['pswd'];
 
-            $id = $row['id'];
+            $id = $row['userid'];
             $username = $row['username'];
             $email = $row['email'];
             $pswd = $row['pswd'];
